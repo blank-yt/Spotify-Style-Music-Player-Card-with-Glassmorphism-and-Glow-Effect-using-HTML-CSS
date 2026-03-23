@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(232, 67, 147, .12), transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(108, 92, 231, .12), transparent 50%),
+    #0a0a0f;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .glow {
+    position: absolute;
+    inset: -40px;
+    z-index: -1;
+    border-radius: 60px;
+    background: radial-gradient(circle, rgba(232, 67, 147, .25), rgba(108, 92, 231, .2), transparent 70%);
+    filter: blur(40px);
+  }
+
+  .artwork {
+    aspect-ratio: 1;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e84393, #6c5ce7 40%, #0984e3 70%, #00cec9);
+    box-shadow: 0 8px 32px rgba(232, 67, 147, .3);
+  }
+
+  .song {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f5f5f7;
+  }
+
+  .artist {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .45);
+  }
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .1);
+
+  .progress {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #e84393, #6c5ce7);
+    transition: width 0.3s linear;
+  }
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+
+  .time {
+    font-size: 12px;
+    color: rgba(255, 255, 255, .3);
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  .btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, .6);
+    font-size: 20px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #f5f5f7;
+    color: #0a0a0f;
+    font-size: 22px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, .15);
+  }
+}
